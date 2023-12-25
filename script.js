@@ -20,6 +20,10 @@ for(let i = 1; i <= 3; i++){
 
 }
 
+let signs = ['+', '-', '/', 'x'];
+
+let holdSign;
+
 let add = (number1 , number2) => {
 
     return number1 + number2;
