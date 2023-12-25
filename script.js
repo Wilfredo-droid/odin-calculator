@@ -24,6 +24,22 @@ let signs = ['+', '-', '/', 'x'];
 
 let holdSign;
 
+let row =  document.createElement("div");
+
+for(let i = 0; i < 4; i++){
+
+
+    let signButton = document.createElement("button");
+
+    signButton.innerText = signs[i];
+
+    row.appendChild(signButton);
+
+
+}
+
+calculatorBody.prepend(row);
+
 let add = (number1 , number2) => {
 
     return number1 + number2;
