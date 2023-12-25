@@ -1,11 +1,11 @@
 let calculatorBody = document.querySelector(".calculatorBody");
 
-for(let i = 0; i < 9; i++){
+for(let i = 0; i <= 3; i++){
 
-    let calculatorNumber = document.createElement("span");
+    let calculatorRow = document.createElement("div");
 
-    calculatorNumber.innerText = i;
+    calculatorRow.classList.add("row");
 
-    calculatorBody.appendChild(calculatorNumber);
+  
 
 }
