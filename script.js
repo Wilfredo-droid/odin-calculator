@@ -18,7 +18,6 @@ let multiply = (number1, number2) => {
     return number1 * number2;
 }
 
-
 let calculatorBody = document.querySelector(".calculatorBody");
 
 for(let i = 1; i <= 3; i++){
@@ -65,6 +64,12 @@ let operationButton = document.createElement("button");
 operationButton.innerText = "=";
 
 calculatorBody.appendChild(operationButton);
+
+let numberOne;
+let numberTwo;
+let operator;
+
+
 
 
 
