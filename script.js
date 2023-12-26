@@ -18,6 +18,32 @@ let multiply = (number1, number2) => {
     return number1 * number2;
 }
 
+let operate = (number1, number2, operator) => {
+
+    switch(operator){
+        case '+':
+            add(number1, number2);
+        break;
+
+        case '-':
+            subtract(number1, number2);
+            break;
+
+        case 'x':
+            multiply(number1, number2);
+            break;    
+
+        case '/':
+            divide(number1, number2);
+            break;    
+
+        default: 
+            document.write("You did not enter an operator");
+            break;
+    }
+
+}
+
 let numberOne = "";
 let numberTwo = "";
 let operator;
