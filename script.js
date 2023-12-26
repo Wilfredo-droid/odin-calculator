@@ -21,19 +21,19 @@ let multiply = (number1, number2) => {
 let operate = (number1, number2, operator) => {
 
     switch(operator){
-        case '+':
+        case "+":
             add(number1, number2);
         break;
 
-        case '-':
+        case "-":
             subtract(number1, number2);
             break;
 
-        case 'x':
+        case "x":
             multiply(number1, number2);
             break;    
 
-        case '/':
+        case "/":
             divide(number1, number2);
             break;    
 
@@ -70,7 +70,7 @@ for(let i = 1; i <= 3; i++){
         calculatorNumber.classList.add("number");
         calculatorRow.appendChild(calculatorNumber);
 
-        calculatorNumber.addEventListener('click', () => {
+        calculatorNumber.addEventListener("click", () => {
 
             if(operator){
                 numberTwo += calculatorNumber.innerText;
@@ -90,7 +90,7 @@ for(let i = 1; i <= 3; i++){
 
 }
 
-let signs = ['+', '-', '/', 'x'];
+let signs = ["+", "-", "/", "x"];
 
 let row =  document.createElement("div");
 
@@ -100,7 +100,7 @@ for(let i = 0; i < 4; i++){
 
     signButton.innerText = signs[i];
 
-    signButton.addEventListener('click', () => {
+    signButton.addEventListener("click", () => {
         operator = signButton.innerText;
     })
 
@@ -111,7 +111,19 @@ for(let i = 0; i < 4; i++){
 
 calculatorBody.prepend(row);
 
+operateButton.addEventListener("click", () => {
 
+    if(!numberOne, !numberTwo, !operator){
+        document.write("You did not select a button");
+    }
+
+    else{
+        let display = operate(numberOne,numberTwo,operator);
+
+        document.write(display);
+    }
+
+});
 
 
 
