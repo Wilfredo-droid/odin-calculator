@@ -30,7 +30,6 @@ operationButton.innerText = "=";
 
 calculatorBody.appendChild(operationButton);
 
-
 for(let i = 1; i <= 3; i++){
 
     let calculatorRow = document.createElement("div");
@@ -66,8 +65,6 @@ for(let i = 1; i <= 3; i++){
 }
 
 let signs = ['+', '-', '/', 'x'];
-
-let holdSign;
 
 let row =  document.createElement("div");
 
