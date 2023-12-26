@@ -18,7 +18,19 @@ let multiply = (number1, number2) => {
     return number1 * number2;
 }
 
+
+let numberOne;
+let numberTwo;
+let operator;
+
 let calculatorBody = document.querySelector(".calculatorBody");
+
+let operationButton = document.createElement("button");
+
+operationButton.innerText = "=";
+
+calculatorBody.appendChild(operationButton);
+
 
 for(let i = 1; i <= 3; i++){
 
@@ -33,6 +45,7 @@ for(let i = 1; i <= 3; i++){
         calculatorNumber.innerText = j;
         calculatorNumber.classList.add("number");
         calculatorRow.appendChild(calculatorNumber);
+
     }
   
     calculatorBody.appendChild(calculatorRow);
@@ -59,15 +72,6 @@ for(let i = 0; i < 4; i++){
 
 calculatorBody.prepend(row);
 
-let operationButton = document.createElement("button");
-
-operationButton.innerText = "=";
-
-calculatorBody.appendChild(operationButton);
-
-let numberOne;
-let numberTwo;
-let operator;
 
 
 
