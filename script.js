@@ -1,3 +1,8 @@
+let numberOne = "";
+let numberTwo = "";
+let operator;
+let result;
+
 let add = (number1 , number2) => {
 
     return number1 + number2;
@@ -43,10 +48,13 @@ let operate = (number1, number2, operator) => {
 
 }
 
-let numberOne = "";
-let numberTwo = "";
-let operator;
-let result;
+let clear = () => {
+    numberOne = null;
+    numberTwo = null;
+    operator = null;
+}
+
+
 
 let calculatorBody = document.querySelector(".calculatorBody");
 
