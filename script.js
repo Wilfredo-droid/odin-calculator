@@ -56,8 +56,6 @@ let clear = () => {
 }
 
 
-
-
 let calculatorBody = document.querySelector(".calculatorBody");
 
 let operateButton = document.createElement("button");
@@ -66,7 +64,11 @@ let numberZeroButton = document.createElement("button");
 
 let clearButton = document.createElement("button");
 
+let decimalButton = document.createElement("button");
 
+decimalButton.innerText = ".";
+
+calculatorBody.appendChild(decimalButton);
 
 clearButton.innerText = "Clear";
 
