@@ -1,6 +1,6 @@
 let numberOne = "";
 let numberTwo = "";
-let operator;
+
 let result;
 //Populate numbers with functions and the . from the decimals with a function to reuse code later
 let add = (number1 , number2) => {
@@ -28,20 +28,20 @@ let operate = (number1, number2, operator) => {
     switch(operator){
         case "+":
             return add(number1, number2);
-      
+
 
         case "-":
             return subtract(number1, number2);
-          
+
 
         case "x":
             return multiply(number1, number2);
-              
+
 
         case "/":
             return divide(number1, number2);
-               
-        default: 
+
+        default:
             document.write("You did not enter an operator");
             break;
     }
@@ -75,11 +75,6 @@ let numberZeroButton = document.createElement("button");
 let clearButton = document.createElement("button");
 
 let decimalButton = document.createElement("button");
-
-let completeOperation = document.createElement("p");
-
-completeOperationOperation = `${numberOne} ${operator} ${numberTwo}`;
-
 
 decimalButton.innerText = ".";
 
@@ -124,7 +119,7 @@ for(let i = 1; i <= 3; i++){
 
     calculatorRow.classList.add("row");
 
-    //(i * 3) - 2 Is the beginning of the row I.e 1,4,7 and i * 3 is the end of the row 3,6,7 I could have used variables with names to explain better but I wanted to feel smart 
+    //(i * 3) - 2 Is the beginning of the row I.e 1,4,7 and i * 3 is the end of the row 3,6,7 I could have used variables with names to explain better but I wanted to feel smart
 
     for(let j = ((i * 3) - 2); j <= i * 3; j++){
         let calculatorNumber = document.createElement("button");
@@ -146,9 +141,9 @@ for(let i = 1; i <= 3; i++){
         });
 
     }
-  
+
     calculatorBody.appendChild(calculatorRow);
-    
+
 
 }
 
@@ -187,8 +182,8 @@ operateButton.addEventListener("click", () => {
     if(!numberOne || !numberTwo || !operator){
 
         display.innerText = "You did not select a button" ;
-        
-        calculatorBody.appendChild(display); 
+
+        calculatorBody.appendChild(display);
     }
 
     else{
@@ -200,6 +195,13 @@ operateButton.addEventListener("click", () => {
     }
 //Put the result in a result variable, change numberOne variable to result if display has already a value
 });
+
+
+let completeOperation = document.createElement("p");
+
+
+let allButtons = document.querySelectorAll("button");
+
 
 
 
