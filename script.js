@@ -112,14 +112,19 @@ calculatorBody.prepend(row);
 
 operateButton.addEventListener("click", () => {
 
+    let display = document.createElement("p");
+
     if(!numberOne, !numberTwo, !operator){
-        document.write("You did not select a button");
+
+        display.innerText = "You did not select a button" ;
+        
+        calculatorBody.appendChild(display); 
     }
 
     else{
-        let display = operate(numberOne,numberTwo,operator);
+        display.innerText = operate(+numberOne,+numberTwo,operator);
 
-        document.write(display);
+        calculatorBody.appendChild(display);
     }
 
 });
