@@ -28,7 +28,6 @@ let row =  document.createElement("div");
 
 for(let i = 0; i < 4; i++){
 
-
     let signButton = document.createElement("button");
 
     signButton.innerText = signs[i];
@@ -39,6 +38,12 @@ for(let i = 0; i < 4; i++){
 }
 
 calculatorBody.prepend(row);
+
+let operationButton = document.createElement("button");
+
+operationButton.innerText = "=";
+
+calculatorBody.appendChild(operationButton);
 
 let add = (number1 , number2) => {
 
