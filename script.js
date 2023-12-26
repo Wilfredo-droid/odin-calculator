@@ -18,9 +18,8 @@ let multiply = (number1, number2) => {
     return number1 * number2;
 }
 
-
-let numberOne;
-let numberTwo;
+let numberOne = "";
+let numberTwo = "";
 let operator;
 
 let calculatorBody = document.querySelector(".calculatorBody");
@@ -46,6 +45,19 @@ for(let i = 1; i <= 3; i++){
         calculatorNumber.classList.add("number");
         calculatorRow.appendChild(calculatorNumber);
 
+        calculatorNumber.addEventListener('click', () => {
+
+            if(operator){
+                numberTwo += calculatorNumber.innerText;
+            }
+
+            else{
+                numberOne += calculatorNumber.innerText;
+            }
+
+            console.log(numberOne, numberTwo);
+        });
+
     }
   
     calculatorBody.appendChild(calculatorRow);
@@ -64,6 +76,10 @@ for(let i = 0; i < 4; i++){
     let signButton = document.createElement("button");
 
     signButton.innerText = signs[i];
+
+    signButton.addEventListener('click', () => {
+        operator = signButton.innerText;
+    })
 
     row.appendChild(signButton);
 
