@@ -1,3 +1,24 @@
+let add = (number1 , number2) => {
+
+    return number1 + number2;
+
+}
+
+let subtract = (number1 , number2) => {
+
+    return number1 - number2;
+
+}
+
+let divide = (number1 , number2) => {
+    return number1 / number2;
+}
+
+let multiply = (number1, number2) => {
+    return number1 * number2;
+}
+
+
 let calculatorBody = document.querySelector(".calculatorBody");
 
 for(let i = 1; i <= 3; i++){
@@ -45,23 +66,5 @@ operationButton.innerText = "=";
 
 calculatorBody.appendChild(operationButton);
 
-let add = (number1 , number2) => {
 
-    return number1 + number2;
-
-}
-
-let subtract = (number1 , number2) => {
-
-    return number1 - number2;
-
-}
-
-let divide = (number1 , number2) => {
-    return number1 / number2;
-}
-
-let multiply = (number1, number2) => {
-    return number1 * number2;
-}
 
