@@ -55,12 +55,33 @@ let clear = () => {
 }
 
 
-
 let calculatorBody = document.querySelector(".calculatorBody");
 
 let operateButton = document.createElement("button");
 
+let numberZeroButton = document.createElement("button");
+
+numberZeroButton.addEventListener("click", () => {
+
+    if(operator){
+        numberTwo += numberZeroButton.innerText;
+    }
+
+    else{
+        numberOne += numberZeroButton.innerText;
+    }
+
+    if(operator === "/"){
+        numberOne = null;
+    }
+
+});
+
+numberZeroButton.innerText = "0";
+numberZeroButton.classList.add("number");
+
 operateButton.innerText = "=";
+calculatorBody.appendChild(numberZeroButton)
 
 calculatorBody.appendChild(operateButton);
 
