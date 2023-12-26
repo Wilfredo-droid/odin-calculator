@@ -76,6 +76,11 @@ let clearButton = document.createElement("button");
 
 let decimalButton = document.createElement("button");
 
+let completeOperation = document.createElement("p");
+
+completeOperationOperation = `${numberOne} ${operator} ${numberTwo}`;
+
+
 decimalButton.innerText = ".";
 
 calculatorBody.appendChild(decimalButton);
@@ -187,7 +192,7 @@ operateButton.addEventListener("click", () => {
     }
 
     else{
-        display.innerText = operate(numberOne,numberTwo,operator);
+        display.innerText = operate(numberOne,numberTwo,operator).toFixed(2);
         result = +(display.innerText);
         numberTwo = 0;
 
