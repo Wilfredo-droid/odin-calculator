@@ -132,6 +132,7 @@ operateButton.addEventListener("click", () => {
     else{
         display.innerText = operate(numberOne,numberTwo,operator);
         result = +(display.innerText);
+        numberTwo = 0;
 
         calculatorBody.appendChild(display);
     }
