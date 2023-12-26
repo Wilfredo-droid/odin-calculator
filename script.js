@@ -55,6 +55,16 @@ let clear = () => {
     result = null;
 }
 
+let addDecimal = () => {
+    if(operator){
+        numberTwo += decimalButton.innerText;
+    }
+
+    else{
+        numberOne += decimalButton.innerText;
+    }
+}
+
 
 let calculatorBody = document.querySelector(".calculatorBody");
 
@@ -69,6 +79,8 @@ let decimalButton = document.createElement("button");
 decimalButton.innerText = ".";
 
 calculatorBody.appendChild(decimalButton);
+
+decimalButton.addEventListener("click", addDecimal);
 
 clearButton.innerText = "Clear";
 
@@ -89,7 +101,7 @@ numberZeroButton.addEventListener("click", () => {
         numberOne += numberZeroButton.innerText;
     }
 
-    if(operator === "/"){
+    if(operator === "/" && numberOne === 0|| numberTwo === 0){
         numberOne = null;
     }
 
