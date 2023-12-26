@@ -151,7 +151,7 @@ operateButton.addEventListener("click", () => {
     }
 
 
-    if(!numberOne, !numberTwo, !operator){
+    if(!numberOne || !numberTwo || !operator){
 
         display.innerText = "You did not select a button" ;
         
