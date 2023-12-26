@@ -1,6 +1,6 @@
 let numberOne = "";
 let numberTwo = "";
-
+let operator;
 let result;
 //Populate numbers with functions and the . from the decimals with a function to reuse code later
 let add = (number1 , number2) => {
@@ -202,7 +202,21 @@ let completeOperation = document.createElement("p");
 
 let allButtons = document.querySelectorAll("button");
 
+allButtons.forEach((button) => {
+    button.addEventListener("click", () => {
 
+        if(!operator){
+            completeOperation.innerText = `${+numberOne}`;
+        }
+
+        else{
+        completeOperation.innerText = `${+numberOne} ${operator} ${+numberTwo}`;
+        }
+
+        calculatorBody.appendChild(completeOperation)
+
+    });
+});
 
 
 
