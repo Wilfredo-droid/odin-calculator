@@ -46,6 +46,7 @@ let operate = (number1, number2, operator) => {
 let numberOne = "";
 let numberTwo = "";
 let operator;
+let result;
 
 let calculatorBody = document.querySelector(".calculatorBody");
 
@@ -113,6 +114,13 @@ calculatorBody.prepend(row);
 operateButton.addEventListener("click", () => {
 
     let display = document.createElement("p");
+    numberOne = +numberOne;
+    numberTwo = +numberTwo;
+
+    if(result){
+        numberOne = result;
+    }
+
 
     if(!numberOne, !numberTwo, !operator){
 
@@ -122,11 +130,12 @@ operateButton.addEventListener("click", () => {
     }
 
     else{
-        display.innerText = operate(+numberOne,+numberTwo,operator);
+        display.innerText = operate(numberOne,numberTwo,operator);
+        result = +(display.innerText);
 
         calculatorBody.appendChild(display);
     }
-
+//Put the result in a result variable, change numberOne variable to result if display has already a value
 });
 
 
