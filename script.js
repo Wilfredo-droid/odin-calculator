@@ -50,11 +50,11 @@ let operator;
 
 let calculatorBody = document.querySelector(".calculatorBody");
 
-let operationButton = document.createElement("button");
+let operateButton = document.createElement("button");
 
-operationButton.innerText = "=";
+operateButton.innerText = "=";
 
-calculatorBody.appendChild(operationButton);
+calculatorBody.appendChild(operateButton);
 
 for(let i = 1; i <= 3; i++){
 
