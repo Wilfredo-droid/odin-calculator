@@ -2,7 +2,7 @@ let numberOne = "";
 let numberTwo = "";
 let operator;
 let result;
-
+//Populate numbers with functions and the . from the decimals with a function to reuse code later
 let add = (number1 , number2) => {
 
     return number1 + number2;
@@ -49,10 +49,13 @@ let operate = (number1, number2, operator) => {
 }
 
 let clear = () => {
-    numberOne = null;
-    numberTwo = null;
+    numberOne = "";
+    numberTwo = "";
     operator = null;
+    result = null;
 }
+
+
 
 
 let calculatorBody = document.querySelector(".calculatorBody");
@@ -60,6 +63,19 @@ let calculatorBody = document.querySelector(".calculatorBody");
 let operateButton = document.createElement("button");
 
 let numberZeroButton = document.createElement("button");
+
+let clearButton = document.createElement("button");
+
+
+
+clearButton.innerText = "Clear";
+
+calculatorBody.appendChild(clearButton);
+
+clearButton.addEventListener("click", clear);
+
+numberZeroButton.innerText = "0";
+numberZeroButton.classList.add("number");
 
 numberZeroButton.addEventListener("click", () => {
 
@@ -77,8 +93,6 @@ numberZeroButton.addEventListener("click", () => {
 
 });
 
-numberZeroButton.innerText = "0";
-numberZeroButton.classList.add("number");
 
 operateButton.innerText = "=";
 calculatorBody.appendChild(numberZeroButton)
